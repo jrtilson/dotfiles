@@ -1,11 +1,15 @@
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
-autocmd FileType rb setlocal shiftwidth=2 tabstop=2
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
+syntax enable " Turn on syntax highlighting  
+set number  
+set hidden " Leave hidden buffers open  
+set history=100 "by default Vim saves your last 8 commands.  We can handle more  
 
-map <C-d> :NERDTreeToggle<CR>
-map <C-f> :Ack 
-set tabstop=2
-set guifont=Menlo:h15
-colorscheme desert
+set tabstop=4       " number of visual spaces per TAB
+set softtabstop=4   " number of spaces in tab when editing
+set expandtab       " tabs are spaces
+set showcmd             " show command in bottom bar
+set cursorline          " highlight current line
+set wildmenu            " visual autocomplete for command menu
+set lazyredraw          " redraw only when we need to.
+set showmatch           " highlight matching [{()}]
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches

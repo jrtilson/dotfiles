@@ -32,23 +32,27 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git aws brew chucknorris meteor rails ruby rvm)
+plugins=(git aws brew chucknorris meteor rails ruby rvm osx)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/mhourahine/.rvm/gems/ruby-1.9.3-p194/bin:/Users/mhourahine/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/mhourahine/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/mhourahine/.rvm/bin:/Users/mhourahine/.rvm/bin
-export PACKAGE_DIRS=/Users/mhourahine/tgs_dev/packages
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/local/heroku/bin:$PATH
+#export PATH="/usr/local/heroku/bin:$PATH"
 
+export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
+export WORKON_HOME=$HOME/.virtualenvs
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source ~/.rvm/scripts/rvm
+
+source /usr/local/bin/virtualenvwrapper.sh
 
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export LC_CTYPE="en_US.UTF-8"
 
 # script to add ssh keys to ssh-agent
-~/.ssh/addkeys.sh
+#~/.ssh/addkeys.sh
 
 alias ls="ls -F"
 alias du="du -h"
@@ -58,3 +62,5 @@ alias mongod="mongod run --config /usr/local/etc/mongod.conf"
 
 bindkey "^[^[[D" backward-word 
 bindkey "^[^[[C" forward-word
+
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
