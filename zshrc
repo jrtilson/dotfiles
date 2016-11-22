@@ -63,4 +63,4 @@ alias mongod="mongod run --config /usr/local/etc/mongod.conf"
 bindkey "^[^[[D" backward-word 
 bindkey "^[^[[C" forward-word
 
-code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+eval $(thefuck --alias)

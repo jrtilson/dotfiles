@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/mhourahine/.vim/bundle/ack.vim'
 let g:netrw_dirhist_2='/Users/jrtilson/dev/elgg/elgg18/elgg/mod/tgsadmin/scripts'
 let g:netrw_dirhist_3='/Users/jrtilson/Library/Logs/DiagnosticReports'
+let g:netrw_dirhist_4='/Users/jrtilson/dev/OnTheMap'
+let g:netrw_dirhist_5='/Users/jrtilson/dev/tgs_project-beat'
+let g:netrw_dirhist_6='/Users/jrtilson/dev/tgs_staff-utilitybelt/.git'
