@@ -1,7 +1,9 @@
 // Place your settings in this file to overwrite the default settings
 {
-	"editor.fontSize": 15,
+	"editor.disableTranslate3d": true,
+	"editor.fontSize": 17,
 	"editor.fontWeight": "normal",
+	"editor.fontFamily": "Consolas,Monaco, 'Courier New', monospace",
 	"workbench.statusBar.visible": true,
 	"search.exclude": {
 		"**/node_modules": true,
@@ -9,6 +11,8 @@
 		"**/.meteor": true
 	},
 	"files.exclude":{
+		"**/.meteor/local/*": true,
+		"**/node_modules/*": true,
 		"**/node_modules/.*@*": true,
 		"**/node_modules/babel-*": true,
 		"**/node_modules/power-assert-*": true,
@@ -26,5 +30,7 @@
 	"editor.cursorBlinking": "solid",
 	"files.associations": {
 		"*.jsx": "javascriptreact"
-	}
+	},
+	"typescript.npm": "/usr/local/bin/npm",
+	"window.zoomLevel": 0
 }

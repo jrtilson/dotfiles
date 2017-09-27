@@ -4,6 +4,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/jrtilson/.oh-my-zsh
 
+# Path exports
+export PATH=~/.local/bin:$PATH
+
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -11,7 +15,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context dir dir_writable rbenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs history time battery)
-
+POWERLEVEL9K_MODE='nerdfont-complete'
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
