@@ -26,11 +26,12 @@
 	"window.zoomLevel": 0,
 	"editor.wordWrap": true,
 	"workbench.sideBar.location": "left",
-	"editor.minimap.enabled": true,
+	"editor.minimap.enabled": false,
 	"editor.cursorBlinking": "solid",
 	"files.associations": {
 		"*.jsx": "javascriptreact"
 	},
 	"typescript.npm": "/usr/local/bin/npm",
-	"window.zoomLevel": 0
+	"window.zoomLevel": 0,
+	"git.enableSmartCommit": true
 }
