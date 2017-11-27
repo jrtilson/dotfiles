@@ -2,10 +2,94 @@
 
 /* to hide the native tabs */
 #TabsToolbar {
-    visibility: collapse;
+		visibility: collapse;
 }
 
 /* to hide the sidebar header */
-#sidebar-header {
-    visibility: collapse;
+#main-window {
+	--toolbar-bgcolor: #31363b !important;
+}
+
+#tabbrowser-tabs {
+	visibility: collapse !important;
+}
+
+#sidebar-box[sidebarcommand="_0ad88674-2b41-4cfb-99e3-e206c74a0076_-sidebar-action"] {
+	overflow: hidden;
+	min-width: 32px;
+	max-width: 32px;
+	position: fixed;
+	top: 53px;
+	transition: all 0.2s ease;
+	border-right: 1px solid #0c0c0d;
+	z-index: 2;
+}
+
+#sidebar-box[sidebarcommand="_0ad88674-2b41-4cfb-99e3-e206c74a0076_-sidebar-action"]:hover,
+#sidebar-box[sidebarcommand="_0ad88674-2b41-4cfb-99e3-e206c74a0076_-sidebar-action"] #sidebar {
+	min-width: 260px !important;
+	max-width: 260px !important;
+}
+
+#sidebar-box[sidebarcommand="_0ad88674-2b41-4cfb-99e3-e206c74a0076_-sidebar-action"] #sidebar-header, #sidebar-box[sidebarcommand="_0ad88674-2b41-4cfb-99e3-e206c74a0076_-sidebar-action"] ~ #sidebar-splitter {
+	display: none;
+}
+
+#sidebar-box[sidebarcommand="_0ad88674-2b41-4cfb-99e3-e206c74a0076_-sidebar-action"] #sidebar-header {
+	background-color: #31363b;
+	border-bottom: none;
+}
+
+/*
+* ADJUST!
+* You need to subtract the height of the panels above sidebar: nav bar,
+* bokmarks bar, sidebar header, etc. -- whichever you have enabled.
+* 
+* 42px subtracted below is the height of the nav bar with default theme.
+* I don't have bookmarks bar enabled, and sidebar header is hidden with
+* CSS above, so this is all I need to do.
+* 
+* Compact theme nav bar height is 29px btw, if you use that.
+*/
+#sidebar-box[sidebarcommand="_0ad88674-2b41-4cfb-99e3-e206c74a0076_-sidebar-action"] #sidebar {
+	height: calc(100vh - 36px); 
+}
+
+#sidebar-box[sidebarcommand="_0ad88674-2b41-4cfb-99e3-e206c74a0076_-sidebar-action"]:not([hidden="true"]) ~ #sidebar-splitter ~ #appcontent {
+	margin-left: 32px;
+}
+
+#main-window[inFullscreen] #appcontent {
+	margin-left: 0 !important;
+}
+
+#main-window[privatebrowsingmode="temporary"] #TabsToolbar, #main-window[inFullscreen] #TabsToolbar {
+	background-color: #11161b;
+}
+#main-window[privatebrowsingmode="temporary"] #tabbrowser-tabs, #main-window[inFullscreen] #tabbrowser-tabs {
+	visibility: visible !important;
+}
+#main-window[inFullscreen][inDOMFullscreen] #tabbrowser-tabs {
+	visibility: collapse !important;
+}
+#main-window[inFullscreen] #sidebar-box[sidebarcommand="_0ad88674-2b41-4cfb-99e3-e206c74a0076_-sidebar-action"] {
+	display: none !important;
+}
+#navigator-toolbox > toolbar:not(#TabsToolbar):not(#toolbar-menubar), .browserContainer > findbar, #browser-bottombox, #toolbar-menubar {
+ background-color: #31363b !important;
+}
+#nav-bar-customization-target {
+ margin: 0px 2px;
+}
+#window-controls {
+ filter: invert(75%);
+}
+#nav-bar toolbarpaletteitem[id^="wrapper-customizableui-special-spring"], #nav-bar toolbarspring {
+ -moz-box-flex: 1 !important;
+}
+.findbar-button:hover {
+	color: #ddd !important;
+}
+.findbar-button[checked="true"]:not(:hover) {
+	color: white !important;
 }
