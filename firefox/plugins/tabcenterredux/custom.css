@@ -1,0 +1,18 @@
+
+#newtab {
+  margin-left: -1px;
+}
+#newtab-icon {
+  margin-right: 8px !important;
+}
+body.dark-theme #newtab.menuopened, body.dark-theme .topmenu-button:hover {
+  background-color: #5a5e62 !important;
+  border-color: transparent !important;
+}
+
+#settings:hover {
+  background-color: #a5a19d !important;
+}
+#settings {
+  filter: invert(75%);
+}
